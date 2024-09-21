@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import App from './App';
 import './index.css';
-import playRoutes from './routes/playRoutes';
+import playRoutes from './routes/PlayRoutes';
 
 // Dynamically import components
 const Homepage = lazy(() => import('./pages/Homepage'));
