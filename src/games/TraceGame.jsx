@@ -64,7 +64,7 @@ const LetterTracingGame = () => {
 					onTouchStart={handleMouseDown}
 					onTouchMove={handleMouseMove}
 					onTouchEnd={handleMouseUp}
-					style={{ border: '2px solid red', touchAction: 'none' }}
+					style={{ touchAction: 'none' }}
 				>
 					<Layer>
 						{lines.map((line, i) => (

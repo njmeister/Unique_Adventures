@@ -73,8 +73,8 @@ export default function PetFoodMatch() {
 
 
 	return (
-		<div className="page">
+		<>
 			{renderLesson()}
-		</div>
+		</>
 	);
 }

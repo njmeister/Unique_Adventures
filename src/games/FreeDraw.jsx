@@ -8,7 +8,7 @@ import './css/freeDraw.css';
 export default function FreeDraw() {
     const [lines, setLines] = useState([]);
     const [isDrawing, setIsDrawing] = useState(false);
-    const [selectedColor, setSelectedColor] = useState('#000');
+    const [selectedColor, setSelectedColor] = useState('#fff');
     const [selectedWidth, setSelectedWidth] = useState(10);
     const [isColorPickerShown, setIsColorPickerShown] = useState(false);
     const [isLineWidthPickerShown, setIsLineWidthPickerShown] = useState(false);

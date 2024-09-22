@@ -19,7 +19,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: var(--color-dark);
+    color: white;
     background-color: black;
 
 	& a {
@@ -40,13 +40,20 @@ header {
     color: var(--color-light);
     padding: 1rem;
     text-align: center;
-	z-index: 5;
+	z-index: 100;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	height: 80px;
+
+	& h1 {
+		margin-left: 20px;
+		font-weight:100;
+	}
 
 	& h2 {
 		margin-right: 20px;
+		font-weight: 400;
 	}
 }
 
@@ -144,7 +151,8 @@ footer {
     padding: 1rem;
     text-align: center;
 	margin-top: auto;
-	z-index: 5;
+	z-index: 50;
+	height: 50px;
 }
 
 .bubble-background {
@@ -397,7 +405,7 @@ footer {
 
 .free-draw-canvas {
 	position: absolute;
-	top: 0;
+	top: 80px;
 	left: 0;
 	z-index: 00;
 }
@@ -406,7 +414,6 @@ footer {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	border: 2px solid white;
 
 	& p {
 		position: absolute;
@@ -422,7 +429,6 @@ footer {
 		left: 50%;
 		height: 100%;
 		transform: translate(-50%, -50%);
-		border: 2px solid blue;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -537,6 +543,180 @@ footer {
 .sorting-container-container {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.game-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 1rem;
+}
+
+.select-screen {
+	display: inline-block;
+	position: relative;
+	height: 300px;
+	width: 500px;
+	overflow: hidden;
+	border-radius: 25px;
+
+	margin: 20px;
+
+}
+
+#pet-food-match-select-screen {
+	background-color: #f8f9fa;
+	transform: translate(-400px, -300px);
+	height: 250%;
+}
+
+#pet-food-match-title {
+	color: white;
+	font-size: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	width: 50%;
+	height: 100%;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#leaf-fall-select-screen {
+	transform: translate(-200px, -90px);
+	height: 150%;
+}
+
+#leaf-fall-title {
+	color: white;
+	font-size: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	width: 50%;
+	height: 100%;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#jack-select-screen {
+	height: 110%;
+}
+
+#jack-title {
+	color: white;
+	font-size: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	width: 50%;
+	height: 100%;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#pinwheel-wheel-select-screen {
+	transform: translate(0px, -90px);
+	height: 175%;
+}
+
+#pinwheel-pin-select-screen {
+	transform: translate(215px, -380px);
+	height: 20%;
+}
+
+#pinwheel-title {
+	color: white;
+	font-size: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	width: 50%;
+	height: 100%;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#free-draw-select-screen {
+	transform: translate(0px, 0px);
+	height: 175%;
+}
+
+#free-draw-title {
+	color: white;
+	font-size: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	width: 50%;
+	height: 100%;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#bubble-pop-title {
+	color: white;
+	font-size: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	width: 50%;
+	height: 100%;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#trace-select-screen {
+	transform: translate(200px, 0px);
+	height: 100%;
+}
+
+#trace-title {
+	color: white;
+	font-size: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	width: 50%;
+	height: 100%;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
