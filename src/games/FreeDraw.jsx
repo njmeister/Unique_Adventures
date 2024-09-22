@@ -14,6 +14,7 @@ export default function FreeDraw() {
     const [isLineWidthPickerShown, setIsLineWidthPickerShown] = useState(false);
 
     const handleMouseDown = (e) => {
+        e.evt.preventDefault();  // Prevent scrolling on touch
         setIsDrawing(true);
         const pos = e.target.getStage().getPointerPosition();
         setLines([...lines, { points: [pos.x, pos.y], color: selectedColor, width: selectedWidth }]);
@@ -21,6 +22,7 @@ export default function FreeDraw() {
 
     const handleMouseMove = (e) => {
         if (!isDrawing) return;
+        e.evt.preventDefault();  // Prevent scrolling on touch
 
         const stage = e.target.getStage();
         const point = stage.getPointerPosition();
@@ -74,6 +76,9 @@ export default function FreeDraw() {
                 onMouseDown={handleMouseDown}
                 onMouseMove={handleMouseMove}
                 onMouseUp={handleMouseUp}
+                onTouchStart={handleMouseDown}
+                onTouchMove={handleMouseMove}
+                onTouchEnd={handleMouseUp}
                 className="free-draw-canvas"
             >
                 <Layer>
@@ -90,7 +95,7 @@ export default function FreeDraw() {
                     ))}
                 </Layer>
             </Stage>
-			<SaveCreationButton saveDiv=".free-draw-canvas" gameTitle="Free Draw" />
+            <SaveCreationButton saveDiv=".free-draw-canvas" gameTitle="Free Draw" />
         </div>
     );
 }
