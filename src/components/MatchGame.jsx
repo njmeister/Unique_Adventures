@@ -21,6 +21,7 @@ export default function MatchGame({
 }) {
     const [droppedItems, setDroppedItems] = useState({});
     const [correctMatch, setCorrectMatch] = useState({});
+	const [incorrectMatch, setIncorrectMatch] = useState({});
     const [allMatched, setAllMatched] = useState(false);
     const [showPlayAgain, setShowPlayAgain] = useState(false);
     const [showInstructions, setShowInstructions] = useState(true);
