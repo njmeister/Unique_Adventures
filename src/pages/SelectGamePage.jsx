@@ -43,7 +43,10 @@ export default function SelectGamePage() {
                     <img src="/assets/img/leafFall/leaf-pile_2.png" alt="Leaf Fall" id="leaf-fall-select-screen" />
                     <p id="leaf-fall-title">Leaf Fall</p>
                 </Link>
-                {/* <Link to="/play/applecount">Apple Count</Link> */}
+                <Link to="/play/applecount" className="select-screen">
+					<img src="/assets/img/appleCount/apple-count-select-screen.svg" alt="Apple Count" id="apple-count-select-screen" />
+					<p id="apple-count-title">Apple Count</p>
+				</Link>
             </div>
             <Outlet /> {/* This will render the nested routes */}
         </>

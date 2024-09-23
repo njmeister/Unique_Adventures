@@ -16,7 +16,7 @@ export default function BubblePopGame({ bubbles }) {
 					img={bubble.img}
 					text={bubble.text}
 					initialX={Math.random() * windowSize.width}
-					speed={-(Math.random() * 2 + 1)}
+					speed={-(Math.random() * 1 + 0.5)}
 					wavelength={Math.random() * 200}
 					direction={Math.random() > 0.5 ? 1 : -1}
 				/>

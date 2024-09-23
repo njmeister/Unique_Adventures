@@ -16,7 +16,7 @@ export default function DragNDropDraw({
         // Add the clicked sticker to the droppable area with a unique id
         setPlacedStickers([
             ...placedStickers,
-            { ...sticker, id: uuidv4(), position: { x: 0, y: 0 } },
+            { ...sticker, id: uuidv4(), position: { x: 0, y: window.innerHeight/4 } },
         ]);
     };
 
