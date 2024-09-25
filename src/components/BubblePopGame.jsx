@@ -1,5 +1,5 @@
 import BubblePopBubble from "./BubblePopBubble";
-import { useMemo, useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function BubblePopGame({ bubbles }) {
 
@@ -17,7 +17,7 @@ export default function BubblePopGame({ bubbles }) {
 					text={bubble.text}
 					initialX={Math.random() * windowSize.width}
 					initialY={windowSize.height}
-					speed={Math.random() * 1 + 0.25}
+					speed={Math.random() * 1 + 10}
 					wavelength={Math.random() * 200}
 					direction={Math.random() > 0.5 ? 1 : -1}
 				/>

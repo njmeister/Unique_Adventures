@@ -4,7 +4,7 @@ import popSound from '/assets/audio/petFoodMatch/fishHappy.mp3';
 
 export default function BubblePopBubble({ color, initialX, initialY, wavelength, direction, text }) {
     const [pop, setPop] = useState(false);
-    const [speed, setSpeed] = useState(Math.random() * 2 + 1);
+    const [speed, setSpeed] = useState(Math.random() * 3 + 3);
     const audioPlayedRef = useRef(false);
     const audioRef = useRef(new Audio(popSound));
 
@@ -62,7 +62,7 @@ export default function BubblePopBubble({ color, initialX, initialY, wavelength,
             setBubblePosition({ x: Math.random() * window.innerWidth, y: window.innerHeight });
             setPop(false);
             audioPlayedRef.current = false;
-            setSpeed(Math.random() * 2 + 1);
+            setSpeed(Math.random() * 3 + 3);
         }
     });
 
