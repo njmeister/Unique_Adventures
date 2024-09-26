@@ -101,6 +101,7 @@ const successMessage = 'Everyone is fed!';
 const background = '/assets/img/petFoodMatch/background.svg';
 
 const animalOptions = [
+	{ name: 'Background', type: 'checkbox' },
   { name: 'Dog', type: 'checkbox' },
   { name: 'Cat', type: 'checkbox' },
   { name: 'Bird', type: 'checkbox' },
@@ -109,6 +110,7 @@ const animalOptions = [
 ];
 
 const colorOptions = [
+	{ name: 'Background', type: 'checkbox' },
   { name: 'Red', type: 'checkbox' },
   { name: 'Blue', type: 'checkbox' },
   { name: 'Yellow', type: 'checkbox' },
@@ -116,9 +118,13 @@ const colorOptions = [
   { name: 'Green', type: 'checkbox' },
 ];
 
+const defaultOptions = [
+	{ name: 'Background', type: 'checkbox'}
+];
+
 export default function PetFoodMatch() {
   const [lesson, setLesson] = useState('');
-  const [checkedItems, setCheckedItems] = useState([]);
+  const [checkedItems, setCheckedItems] = useState(['Background']);
 
   useEffect(() => {
     if (lesson === 'animals') {
@@ -164,7 +170,7 @@ export default function PetFoodMatch() {
         return (
           <div className="lesson-select-container">
             <div className="match-game-background">
-              <img src={background} />
+			{checkedItems.includes('Background') && <img src={background} />}
             </div>
             <div className="lesson-select">
               <h3>What would you like to learn today?</h3>
@@ -181,7 +187,7 @@ export default function PetFoodMatch() {
   return (
     <>
       {renderLesson()}
-      <OptionsList options={lesson === 'animals' ? animalOptions : colorOptions} onOptionChange={handleCheckboxChange} checkedItems={checkedItems} />
+      <OptionsList options={lesson === 'animals' ? animalOptions : lesson === 'colors' ? colorOptions : defaultOptions} onOptionChange={handleCheckboxChange} checkedItems={checkedItems} />
     </>
   );
 }

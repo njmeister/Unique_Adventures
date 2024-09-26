@@ -107,7 +107,7 @@ export default function MatchGame({
         </div>
       )}
       <div className={'match-game-background'}>
-        <img src={background} />
+        {checkedItems.includes('Background') && <img src={background} /> }
       </div>
       <div className="match-game-container">
         {allMatched && (

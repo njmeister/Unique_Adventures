@@ -13,6 +13,7 @@ export default function SortingGame({
     instructions,
     successMessage,
     background,
+	checkedItems,
 }) {
     const [containerValue, setContainerValue] = useState({});
     const [goal, setGoal] = useState({});
@@ -109,7 +110,7 @@ export default function SortingGame({
                         )}
                     </>
                 )}
-			{background && <img src={background} alt="background" className="background"/>}
+			{checkedItems.includes('Background') && <div className="background"><img src={background} alt="background"/></div>}
             <div className="initial-container-container">
                 {initialContainerItems.map((container, index) => (
                     <SortingGameInitialContainer
