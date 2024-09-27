@@ -9,6 +9,7 @@ const DragNDropJack = lazy(() => import('../games/DragNDropJack'));
 const FreeDraw = lazy(() => import('../games/FreeDraw'));
 const BubbleFallLeaves = lazy(() => import('../games/BubbleFallLeaves'));
 const AppleCount = lazy(() => import('../games/AppleCount'));
+const HalloweenCardMatch = lazy(() => import('../games/HalloweenCardMatch'));
 
 const playRoutes = [
     {
@@ -78,6 +79,14 @@ const playRoutes = [
                     </Suspense>
                 ),
             },
+			{
+				path: 'halloweencardmatch',
+				element: (
+					<Suspense fallback={<div>Loading...</div>}>
+						<HalloweenCardMatch />
+					</Suspense>
+				),
+			}
         ],
     },
 ];

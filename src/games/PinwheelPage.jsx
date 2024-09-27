@@ -43,6 +43,7 @@ export default function PinwheelPage() {
 
 	return (
 		<div className="pinwheel-page">
+			<h1>Tap the Pinwheel to see it spin!</h1>
 			<div className="pinwheel-adjustment-container">
 				<div className="pinwheel-container">
 					{Array.from({ length: pinwheelCount }).map((_, index) => (

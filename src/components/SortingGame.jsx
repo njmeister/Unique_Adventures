@@ -150,8 +150,8 @@ export default function SortingGame({
 									))}
 							</div>
                         </SortingContainer>
-                        <h1 style={{ zIndex: 200 }}>
-                            {containerValue[container.identity] || 0}/{container.goal}
+                        <h1 style={{ zIndex: 200, textAlign: "center" }}>
+                            {containerValue[container.identity] || 0}
                         </h1>
                     </div>
                 ))}

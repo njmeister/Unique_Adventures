@@ -47,6 +47,10 @@ export default function SelectGamePage() {
 					<img src="/assets/img/appleCount/apple-count-select-screen.svg" alt="Apple Count" id="apple-count-select-screen" />
 					<p id="apple-count-title">Apple Count</p>
 				</Link>
+				<Link to="/play/halloweencardmatch" className="select-screen">
+					<img src="/assets/img/halloweenCardMatch/halloween-card-match-select-screen.png" alt="Halloween Card Match" id="halloween-card-match-select-screen" />
+					<p id="halloween-card-match-title">Halloween Card Match</p>
+				</Link>
             </div>
             <Outlet /> {/* This will render the nested routes */}
         </>
