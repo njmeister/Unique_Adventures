@@ -15,6 +15,11 @@ const cardFrontList = [
     {frontImg: '/assets/img/halloweenCardMatch/witch.png', frontText: 'Witch'},
     {frontImg: '/assets/img/halloweenCardMatch/skull.png', frontText: 'Skull'},
     {frontImg: '/assets/img/halloweenCardMatch/vampire.png', frontText: 'Vampire'},
+	{frontImg: '/assets/img/halloweenCardMatch/black-cat.png', frontText: 'Black Cat'},
+	{frontImg: '/assets/img/halloweenCardMatch/frankenstein.png', frontText: 'Frankenstein'},
+	{frontImg: '/assets/img/halloweenCardMatch/mummy.png', frontText: 'Mummy'},
+
+
     {frontImg: '/assets/img/halloweenCardMatch/ghost.png', frontText: 'Ghost'},
     {frontImg: '/assets/img/halloweenCardMatch/pumpkin.png', frontText: 'Pumpkin'},
     {frontImg: '/assets/img/halloweenCardMatch/bat.png', frontText: 'Bat'},
@@ -23,6 +28,9 @@ const cardFrontList = [
     {frontImg: '/assets/img/halloweenCardMatch/witch.png', frontText: 'Witch'},
     {frontImg: '/assets/img/halloweenCardMatch/skull.png', frontText: 'Skull'},
     {frontImg: '/assets/img/halloweenCardMatch/vampire.png', frontText: 'Vampire'},
+	{frontImg: '/assets/img/halloweenCardMatch/black-cat.png', frontText: 'Black Cat'},
+	{frontImg: '/assets/img/halloweenCardMatch/frankenstein.png', frontText: 'Frankenstein'},
+	{frontImg: '/assets/img/halloweenCardMatch/mummy.png', frontText: 'Mummy'},
 ];
 
 const options = [
@@ -34,10 +42,13 @@ const options = [
     {name: 'Witch', type: 'checkbox'},
     {name: 'Skull', type: 'checkbox'},
     {name: 'Vampire', type: 'checkbox'},
+	{name: 'Black Cat', type: 'checkbox'},
+	{name: 'Frankenstein', type: 'checkbox'},
+	{name: 'Mummy', type: 'checkbox'},
 ]
 
 export default function HalloweenCardMatch() {
-    const [checkedItems, setCheckedItems] = useState(['Ghost', 'Pumpkin', 'Bat', 'Spider', 'Candy', 'Witch', 'Skull', 'Vampire']);
+    const [checkedItems, setCheckedItems] = useState(['Ghost', 'Pumpkin', 'Bat', 'Spider', 'Candy', 'Witch', 'Skull', 'Vampire', 'Black Cat', 'Frankenstein', 'Mummy']);
 
     const handleCheckboxChange = (option) => {
         setCheckedItems((prev) =>

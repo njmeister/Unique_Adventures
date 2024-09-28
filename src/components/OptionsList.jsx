@@ -38,7 +38,7 @@ export default function OptionsList({
         width: '75px',
         height: '60px',
         zIndex: 100,
-        position: 'absolute',
+        position: 'fixed',
         bottom: '75px',
         left: '20px',
         display: 'flex',
@@ -55,7 +55,7 @@ export default function OptionsList({
         position: 'relative',
     };
     const menuStyle = {
-        position: 'absolute',
+        position: 'fixed',
         bottom: '150px',
         left: '0',
         width: '25%',
