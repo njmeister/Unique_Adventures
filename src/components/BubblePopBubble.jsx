@@ -5,16 +5,14 @@ import popSound from '/assets/audio/petFoodMatch/fishHappy.mp3';
 export default function BubblePopBubble({ color, initialX, initialY, wavelength, direction, text }) {
     const [pop, setPop] = useState(false);
     const [speed, setSpeed] = useState(Math.random() * 3 + 3);
-    const audioPlayedRef = useRef(false);
-    const audioRef = useRef(new Audio(popSound));
-
     const [bubblePosition, setBubblePosition] = useState({ x: initialX, y: window.innerHeight });
     const [waveFrequency, setWaveFrequency] = useState(Math.random() * 0.01 + 0.01);
     const [waveAmplitude, setWaveAmplitude] = useState(Math.random() * 200 + 100);
-
     const [textPositionX, setTextPositionX] = useState(0);
     const [textPositionY, setTextPositionY] = useState(0);
-
+    const audioPlayedRef = useRef(false);
+    const audioRef = useRef(new Audio(popSound));
+	
     useEffect(() => {
         audioRef.current.load();
         audioRef.current.volume = 1;
@@ -35,19 +33,20 @@ export default function BubblePopBubble({ color, initialX, initialY, wavelength,
         if (!audioPlayedRef.current) {
             setPop(true);
             audioPlayedRef.current = true;
-            audioRef.current.play().then(() => {
-                console.log('Bubble Audio is playing');
-            }).catch((error) => {
-                console.error('Error playing audio:', error);
-            });
+            audioRef.current.play();
         }
 
-        console.log('Bubble X:', bubblePosition.x);
-        console.log('Bubble Y:', bubblePosition.y);
+
+
         setTextPositionX(bubblePosition.x);
         setTextPositionY(bubblePosition.y);
-        console.log('Text X:', textPositionX);
-        console.log('Text Y:', textPositionY);
+
+		setTimeout(() => {
+			setBubblePosition({ x: Math.random() * window.innerWidth, y: window.innerHeight });
+			setPop(false);
+			audioPlayedRef.current = false;
+			setSpeed(Math.random() * 3 + 3);
+		}, 3000);
     };
 
     const springProps = useSpring({

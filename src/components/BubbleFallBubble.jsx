@@ -10,7 +10,7 @@ export default function BubblePopBubble({
 	text,
 }) {
 	const [pop, setPop] = useState(false);
-	const [speed, setSpeed] = useState(Math.random() * 2 + 7);
+	const [speed, setSpeed] = useState(Math.random() * 5 + 5);
 	const audioPlayedRef = useRef(false);
 	const audioRef = useRef(new Audio(popSound));
 
@@ -55,6 +55,13 @@ export default function BubblePopBubble({
 
 		setTextPositionX(bubblePosition.x);
 		setTextPositionY(bubblePosition.y);
+
+		setTimeout(() => {
+			setBubblePosition({ x: Math.random() * window.innerWidth, y: 0 });
+			setPop(false);
+			audioPlayedRef.current = false;
+			setSpeed(Math.random() * 2 + 3);
+		}, 3000);
 	};
 
 	const springProps = useSpring({
