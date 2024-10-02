@@ -1,0 +1,54 @@
+.match-game-instructions {
+	top: 80vh;
+}
+
+.modelA-list {
+
+}
+
+.modelA {
+	width: 200px;
+	height: auto;
+	padding: 10px;
+	margin: 15px 7px 0px 7px;
+}
+
+.matched-modelA {
+	background-color: #28a745;
+	width: 200px;
+	height: auto;
+	padding: 10px;
+	border-radius: 10px 10px 0px 0px;
+	margin: 15px 7px 0px 7px;
+}
+
+.matched-modelB {
+	background-color: #28a745;
+	width: 200px;
+	height: auto;
+	padding: 10px;
+	text-align: center;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.success-message {
+	position: fixed;
+	bottom: 0;
+	color: white;
+	margin-top: 50px;
+	background-color: rgb(0, 0, 0, 0.75);
+	height: 50vh;
+}
+
+.play-again {
+	position: absolute;
+	border-radius: 25px;
+	padding: 1rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	font-size: large;
+	background-color: var(--color-primary);
+	color: white;
+}

@@ -124,7 +124,7 @@ export default function MatchGame({
         <div className="modelA-list">
           {filteredModelAList.map((modelA, index) => (
             <div key={index} className="droppable-container">
-              <MatchingModelA identity={modelA.identity} img={modelA.img} />
+              <MatchingModelA identity={modelA.identity} img={modelA.img} className={correctMatch[`droppable-${modelA.identity}`] ? "matched-modelA" : "modelA"} />
               {droppedItems[`droppable-${modelA.identity}`] && (
                 <MatchingModelB
                   identity={droppedItems[

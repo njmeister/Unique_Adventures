@@ -51,6 +51,10 @@ export default function SelectGamePage() {
 					<img src="/assets/img/halloweenCardMatch/halloween-card-match-select-screen.png" alt="Halloween Card Match" id="halloween-card-match-select-screen" />
 					<p id="halloween-card-match-title">Halloween Card Match</p>
 				</Link>
+				<Link to="/play/emotionmatch" className="select-screen">
+					<img src="/assets/img/emotionMatch/happy-face.svg" alt="Emotion Match" id="emotion-match-select-screen" />
+					<p id="emotion-match-title">Emotion Match</p>
+				</Link>
             </div>
             <Outlet /> {/* This will render the nested routes */}
         </>
