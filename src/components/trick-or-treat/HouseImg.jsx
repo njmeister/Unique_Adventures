@@ -2,7 +2,7 @@ import "../css/trickOrTreatGame.css";
 
 export default function HouseImg({ houseColor, roofColor }) {
     return (
-        <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1253.48 997.9">
+        <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1253.48 997.9" preserveAspectRatio="xMidYMid meet">
           <g id="Layer_1-2" data-name="Layer_1">
             <g>
               <rect className="cls-1" x="497.63" y="960.09" width="258.21" height="35.82"/>

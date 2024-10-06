@@ -7,17 +7,18 @@ import WordPop from '../util/WordPop.jsx';
 
 import '../css/trickOrTreatGame.css';
 
-
 const candyList = [
-	{ img: '/assets/img/trickOrTreat/sucker.svg', name: 'Sucker' },
-	{ img: '/assets/img/trickOrTreat/hard-candy.svg', name: 'Hard Candy' },
-	{ img: '/assets/img/trickOrTreat/candy-bar.svg', name: 'Candy Bar' },
+    { img: '/assets/img/trickOrTreat/sucker.svg', name: 'Sucker' },
+    { img: '/assets/img/trickOrTreat/hard-candy.svg', name: 'Hard Candy' },
+    { img: '/assets/img/trickOrTreat/candy-bar.svg', name: 'Candy Bar' },
 ];
 
 export default function TrickOrTreatGame() {
     const [isCandyVisible, setIsCandyVisible] = useState(false);
     const [isDoorClicked, setIsDoorClicked] = useState(false);
     const [isPawnClicked, setIsPawnClicked] = useState(false);
+    const [candyBag, setCandyBag] = useState([]); // Initialize candyBag state
+	const [isBagFull, setIsBagFull] = useState(false);
 
     const candySpringProps = useSpring({
         transform: isCandyVisible ? 'scale(1)' : 'scale(0)',
@@ -39,21 +40,35 @@ export default function TrickOrTreatGame() {
         }
     }, [isDoorClicked, isPawnClicked]);
 
-    const handleCandyClick = () => {
+    const handleCandyClick = (candy) => {
+		if (candyBag.length <= 7) {
+        setCandyBag((prevCandyBag) => [...prevCandyBag, candy]); // Update candyBag state with the entire candy object
+		} else {
+			setIsBagFull(true);
+		}
         setIsCandyVisible(false);
-		setIsDoorClicked(false);
-		setIsPawnClicked(false);
+        setIsDoorClicked(false);
+        setIsPawnClicked(false);
+        console.log(candyBag);
     };
 
     return (
         <div className="trick-or-treat-game">
             <House onDoorClick={handleDoorClick} isDoorClicked={isDoorClicked} />
-            <animated.div className="candy-container" style={candySpringProps} onClick={handleCandyClick}>
-				{candyList.map((candy, index) => (
-					<Candy key={index} img={candy.img} name={candy.name} />
-				))}
+            <animated.div className="candy-container" style={candySpringProps}>
+                {candyList.map((candy, index) => (
+                    <Candy key={index} img={candy.img} name={candy.name} onClick={() => handleCandyClick(candy)} />
+                ))}
             </animated.div>
             <Pawn onPawnClick={handlePawnClick} isPawnClicked={isPawnClicked} />
+            <div className="candy-bag">
+                    {candyBag.map((candy, index) => (
+                        <div key={index} className="candy-icon">
+                            <img src={candy.img} alt={candy.name} />
+                        </div>
+                    ))}
+					{isBagFull && <div className="bag-alert" ><WordPop text="Uh-Oh! Your Candy Bag is Full!" delay={2000} /></div>}
+            </div>
         </div>
     );
 }
