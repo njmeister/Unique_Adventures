@@ -13,7 +13,7 @@
 
       .cls-2 {
         fill: blue;
-        stroke-width: 1.02px;
+        stroke-width: 1px;
       }
 
       .cls-3 {
@@ -29,7 +29,7 @@
       }
 
       .cls-6 {
-        stroke-width: .46px;
+        stroke-width: .5px;
       }
 
       .cls-7 {
@@ -45,11 +45,11 @@
       }
 
       .cls-11 {
-        fill: #00d;
+        fill: none;
       }
 
       .cls-10 {
-        stroke-width: .71px;
+        stroke-width: 1px;
       }
     </style>
   </defs>

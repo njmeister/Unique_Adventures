@@ -1,0 +1,170 @@
+.trick-or-treat-game {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.house {
+	width: 60%;
+	position: absolute;
+	top: 20%;
+	left: 30%;
+	transform: translate(-50%, -50%);
+
+}
+
+.door {
+	position: absolute;
+	width: 21%;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.candy-container {
+	position: absolute;
+	width: 50%;
+	height: 30%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 20;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+	background-color: white;
+	border: 2px solid gray;
+	border-radius: 500px;
+}
+
+.candy {
+	width: 30%;
+	height: 100px;
+
+	#sucker {
+		width: 50px;
+	}
+}
+
+#sucker {
+	width: 50px;
+}
+
+.pawn {
+	width: 4%;
+	position: absolute;
+	bottom: 10%;
+	left: 20%;
+}
+
+.next-house-arrow {
+	position: absolute;
+	top: 90%;
+	left: 90%;
+
+	& p {
+		font-size: 5em;
+		color: white;
+		text-shadow: 2px 2px 2px black;
+	}
+}
+
+.cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
+    stroke: #000;
+    stroke-miterlimit: 10;
+}
+
+.cls-1, .cls-10 {
+    fill: #b3b3b3;
+}
+
+.cls-2 {
+    fill: blue;
+    stroke-width: 1px;
+}
+
+.cls-3 {
+    fill: #ff0;
+}
+
+.cls-4 {
+    fill: #3fa9f5;
+}
+
+.cls-5, .cls-6, .cls-7 {
+    fill: #fff;
+}
+
+.cls-6 {
+    stroke-width: .5px;
+}
+
+.cls-7 {
+    stroke-width: .5px;
+}
+
+.cls-8, .cls-9 {
+    fill: none;
+}
+
+.cls-9 {
+    stroke-width: 2px;
+}
+
+.cls-11 {
+    fill: none;
+}
+
+.cls-10 {
+    stroke-width: 1px;
+}
+
+@font-face {
+	font-family: 'Halloween';
+	src: url('/assets/fonts/EspenHalloween.ttf') format('truetype');
+}
+
+.trick-or-treat-msg, .thank-you-msg {
+	position: absolute;
+	/* border: 2px solid orange; */
+	border-radius: 10px;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	height: 20%;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	z-index: 50;
+}
+
+.word-pop {
+	color: orange;
+	font-family: 'Halloween';
+	font-size: 5em;
+	text-shadow: 5px 5px 5px black;
+}
+
+.trick {
+	margin: 10px;
+	/* position: absolute;
+	top: 30%;
+	left: 35%; */
+}
+
+.or {
+	margin: 10px;
+	/* position: absolute;
+	top: 30%;
+	left: 65%; */
+}
+
+.treat {
+	margin: 10px;
+	/* position: absolute;
+	top: 50%;
+	left: 45%; */
+}
