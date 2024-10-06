@@ -1,4 +1,7 @@
 .match-game-background {
+	position: absolute;
+	width: 100%;
+	z-index: 0;
 	height: 50vh;
 	overflow: hidden;
 	display: flex;
@@ -12,25 +15,89 @@
 	}
 }
 
+
+
 .modelA-list {
 	transform: translate(0%, 45%);
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	margin: 1rem;
+	
 }
 
 .modelB-list {
+	display: flex;
+	justify-content: center;
+	margin: 1rem;
+	margin-top: 125px;
 	border-radius: 150px;
 	padding: 1rem;
 	transform: translate(0%, 55%);
 }
 
-/* body {
-	background-color: #00c8ff;
-} */
+.modelA-container {
+	margin: 1rem ;
+	padding: 1rem;
+	position: relative;
+
+	& img {
+		width: 100%;
+		max-width: 150px;
+		max-height: 200px;
+	}
+}
+
+.modelB-container {
+	margin: 1rem;
+	padding: 1rem;
+	touch-action: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 100px;
+
+	& img {
+		width: 100%;
+		max-width: 125px;
+		max-height: 100px;
+	}
+}
+
+.modelA, .matched-modelA {
+	width: 200px;
+	padding: 10px;
+	margin: 15px 7px 0px 7px;
+	position: relative;
+	transform: translate(0%, -25%);
+}
+
+.matched-modelB {
+	background-color: var(--color-success);
+
+	& img {
+		width: 100%;
+		max-width: 125px;
+		max-height: 100px;
+		position: absolute;
+		transform: translate(-150%, -30%);
+	}
+}
+.droppable-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
 
 .success-message h1 {
 	border-radius: 25px;
 	padding: 1rem;
 	transform: translate(0%, 55%);
 	color: white;
+	
 }
 
 .play-again {
@@ -45,3 +112,32 @@
 	background-color: var(--color-primary);
 	color: white;
 }
+
+#Dog {
+	max-height: none;
+	height: 250px;
+}
+
+#Cat {
+	max-height: none;
+	height: 230px;
+}
+
+
+
+#Bird {
+	max-height: none;
+	height: 200px;
+	transform: translate(0%, -30%);
+}
+
+#Fish {
+	max-height: none;
+	height: 125px;
+}
+
+#Rabbit {
+	max-height: none;
+	height: 220px;
+}
+

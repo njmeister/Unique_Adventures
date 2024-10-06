@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import MatchGame from '../components/MatchGame';
-import OptionsList from '../components/OptionsList';
+import MatchGame from '../components/matchingGames/MatchGame';
+import OptionsList from '../components/util/OptionsList';
 import './css/emotionMatch.css';
 
 const modelAList = [

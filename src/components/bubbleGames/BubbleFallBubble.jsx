@@ -94,7 +94,7 @@ export default function BubblePopBubble({
 					}}
 					onClick={handleClick}
 				>
-					<img src={img} />
+					<img src={img} draggable="false"/>
 				</animated.div>
 			) : (
 				<animated.div

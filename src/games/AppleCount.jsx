@@ -1,5 +1,5 @@
-import SortingGame from "../components/SortingGame";
-import OptionsList from "../components/OptionsList";
+import SortingGame from "../components/sortingGames/SortingGame";
+import OptionsList from "../components/util/OptionsList";
 // import './css/appleCount.css';
 import { useState } from 'react';
 

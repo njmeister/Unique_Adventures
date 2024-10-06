@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from '@react-spring/web';
-import './css/flippingCard.css';
+import '../css/flippingCard.css';
 
 export default function FlippingCard({ backImg, frontImg, backText, frontText, flipped: controlledFlipped, onFlip }) {
   const [internalFlipped, setInternalFlipped] = useState(false);

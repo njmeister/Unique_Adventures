@@ -3,8 +3,8 @@ import { DndContext } from '@dnd-kit/core';
 import SortingItem from './SortingItem';
 import SortingContainer from './SortingContainer';
 import SortingGameInitialContainer from './SortingGameInitialContainer';
-import Confetti from './Confetti';
-import './css/sortingGame.css';
+import Confetti from '../util/Confetti';
+import '../css/sortingGame.css';
 
 export default function SortingGame({
     containers,

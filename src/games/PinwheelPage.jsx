@@ -1,6 +1,6 @@
 import React from 'react';
-import Pinwheel from '../components/Pinwheel';
-import Counter from '../components/Counter';
+import Pinwheel from '../components/pinwheel/Pinwheel';
+import Counter from '../components/util/Counter';
 import './css/pinwheelPage.css';
 
 export default function PinwheelPage() {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import FlippingCard from './FlippingCard';
-import './css/cardMatchGame.css';
-import Confetti from './Confetti';
+import FlippingCard from '../util/FlippingCard';
+import '../css/cardMatchGame.css';
+import Confetti from '../util/Confetti';
 
 function shuffleArray(array) {
 	for (let i = array.length - 1; i > 0; i--) {

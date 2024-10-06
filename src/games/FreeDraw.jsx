@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Stage, Layer, Line } from 'react-konva';
-import ColorPicker from '../components/ColorPicker';
-import LineWidthPicker from '../components/LineWidthPicker';
-import SaveCreationButton from '../components/SaveCreationButton';
+import ColorPicker from '../components/util/ColorPicker';
+import LineWidthPicker from '../components/util/LineWidthPicker';
+import SaveCreationButton from '../components/util/SaveCreationButton';
 import './css/freeDraw.css';
 
 export default function FreeDraw() {

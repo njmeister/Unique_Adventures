@@ -1,6 +1,6 @@
-import CardMatchGame from '../components/CardMatchGame';
+import CardMatchGame from '../components/matchingGames/CardMatchGame';
 import { useState } from 'react';
-import OptionsList from '../components/OptionsList';
+import OptionsList from '../components/util/OptionsList';
 
 const cardBack = [ 
     {backImg: '/assets/img/halloweenCardMatch/card-back.png', backText: 'Happy Halloween!'}

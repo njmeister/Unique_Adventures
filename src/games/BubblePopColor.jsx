@@ -1,4 +1,4 @@
-import BubblePopGame from "../components/BubblePopGame"
+import BubblePopGame from "../components/bubbleGames/BubblePopGame"
 import "./css/bubblePopColor.css";
 
 const bubbles = [
