@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './colorPicker.css';
 
 export default function ColorPicker({ customColors, selectedColor, handleColorChange, isShown, togglePicker }) {
     const [expandedColors, setExpandedColors] = useState(0);

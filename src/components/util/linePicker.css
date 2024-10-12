@@ -1,0 +1,41 @@
+.line-width-picker-full-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 75px;
+	z-index: 100;
+}
+
+.line-width-picker-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 75px;
+	border: 1px solid green;
+}
+
+.line-width-show-container {
+	position: relative;
+	width: 75px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 75px;
+	height: 75px;
+}
+
+.line-width-show {
+	border-radius: 50%;
+	border: 1px solid gray;
+}
+
+.line-width-picker-width {
+	border: 1px solid gray;
+	border-radius: 50%;
+	margin: 2px;
+}

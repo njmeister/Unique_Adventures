@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import './counter.css';
 
 export default function Counter({ initialCount = 0, incrementDisplay, decrementDisplay, upperLimit, lowerLimit, onCountChange }) {
 	const [count, setCount] = useState(initialCount);

@@ -1,5 +1,6 @@
 import React from 'react';
 import Draggable from 'react-draggable';
+import './sticker.css';
 
 export default function Sticker({ img, alt, text, position, isDraggable, onDoubleClick }) {
     return (

@@ -1,0 +1,28 @@
+.color-picker-container {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+
+.color-picker-color {
+	width: 50px;
+	height: 50px;
+	/* border-radius: 50%; */
+	border: 1px solid gray;
+	margin: 5px;
+}
+
+.color-picker-selected-color {
+	width: 75px;
+	height: 75px;
+	/* border-radius: 50%; */
+	border: 1px solid gray;
+}
+
+.color-picker-full-container {
+	position: relative;
+	z-index: 100;
+	width: 75px;
+}

@@ -1,0 +1,11 @@
+.refresh-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 10px;
+	margin: 3rem;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: black;
+	color: white;
+}

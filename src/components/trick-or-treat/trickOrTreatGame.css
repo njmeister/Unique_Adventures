@@ -21,6 +21,22 @@
 	max-height: 600px;
 }
 
+.pumpkin
+{
+	position: absolute;
+	width: 15%;
+	top: 95%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
 
 .door {
 	position: absolute;
@@ -29,28 +45,48 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	max-width: 158px;
+	cursor: pointer;
+}
+
+.candy-master {
+	position: absolute;
+	width: 8%;
+	top: 57%;
+	left: 45%;
+	z-index: -1;
 }
 
 .candy-container {
 	position: absolute;
-	width: 50%;
-	height: 30%;
-	top: 50%;
-	left: 50%;
+	width: 60%;
+	height: 60%;
+	top: 40%;
+	left: 40%;
 	transform: translate(-50%, -50%);
 	z-index: 20;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	flex-wrap: wrap;
 	align-items: center;
 	background-color: white;
 	border: 2px solid gray;
 	border-radius: 500px;
+	cursor: grab;
+	
+	&:active {
+		cursor: grabbing;
+	}
 }
 
 .candy {
-	width: 30%;
+	width: 25%;
 	height: 100px;
+
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
 }
 
 .candy-bag {
@@ -59,6 +95,7 @@
 	justify-content: flex-start;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	z-index: 100;
 	/* height: 50%;
 	width: 50%; */
 }
@@ -73,21 +110,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 100;
 
 	& img {
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
 	}
-}
-
-#sucker {
-	width: 100px;
-	transform: translate(50%, -15%);
-}
-
-#hard-candy {
-	transform: translate(-10%, -20%);
 }
 
 .bag-alert {
@@ -98,23 +127,72 @@
 	width: 60%;
 }
 
+.go-home-msg {
+	cursor: pointer;
+}
+
 .pawn {
 	width: 4%;
 	position: absolute;
 	bottom: 10%;
 	left: 20%;
+	cursor: pointer;
 }
 
 .next-house-arrow {
 	position: absolute;
 	top: 90%;
 	left: 90%;
+	cursor: pointer;
 
 	& p {
 		font-size: 5em;
 		color: white;
 		text-shadow: 2px 2px 2px black;
 	}
+}
+
+.home {
+	position: absolute;
+	top: 80px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	z-index: 200;
+}
+
+.home-candy-bag {
+	width: 80vw;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	& div {
+		width: 20vw;
+		height: 20vh;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+.unique-msg {
+	text-align: center;
+	font-size: .75rem;
+}
+
+.play-again-msg {
+	cursor: pointer;
 }
 
 .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {

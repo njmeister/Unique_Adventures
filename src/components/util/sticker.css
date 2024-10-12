@@ -1,0 +1,7 @@
+.sticker-image {
+	position: relative;
+	margin: 10px;
+	height: auto;
+	width: auto;
+	z-index: 10;
+}

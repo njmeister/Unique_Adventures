@@ -1,3 +1,5 @@
+import "./refreshButton.css";
+
 export default function RefreshButton({ text }) {
 	const handleRefresh = () => {
 		window.location.reload();

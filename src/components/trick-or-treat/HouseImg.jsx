@@ -1,4 +1,4 @@
-import "../css/trickOrTreatGame.css";
+import "./trickOrTreatGame.css";
 
 export default function HouseImg({ houseColor, roofColor }) {
     return (

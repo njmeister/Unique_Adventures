@@ -1,5 +1,6 @@
 import BubblePopBubble from "./BubblePopBubble";
 import { useState } from "react";
+import "./bubbleGames.css";
 
 export default function BubblePopGame({ bubbles }) {
 

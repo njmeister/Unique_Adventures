@@ -3,6 +3,7 @@ import MatchingModelA from './MatchingModelA';
 import MatchingModelB from './MatchingModelB';
 import { DndContext } from '@dnd-kit/core';
 import Confetti from '../util/Confetti';
+import './matchGame.css';
 
 function shuffleArray(array) {
 	for (let i = array.length - 1; i > 0; i--) {

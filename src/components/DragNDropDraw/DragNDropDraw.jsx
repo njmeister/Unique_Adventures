@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import Sticker from './util/Sticker.jsx';
+import Sticker from '../util/Sticker.jsx';
 import { v4 as uuidv4 } from 'uuid'; // Use UUID for unique keys
-import SaveCreationButton from './util/SaveCreationButton.jsx';
-import RefreshButton from './util/RefreshButton.jsx';
+import SaveCreationButton from '../util/SaveCreationButton.jsx';
+import RefreshButton from '../util/RefreshButton.jsx';
+import './dragNDropDraw.css';
 
 export default function DragNDropDraw({
     droppableBackground,

@@ -1,0 +1,34 @@
+.save-creation-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	margin: 3rem;
+	border: 1px solid gray;
+	border-radius: 5px;
+	background-color: black;
+
+	& * {
+		margin: 5px;
+	}
+}
+
+/* Style for the placeholder text */
+.save-creation-input::placeholder {
+	color: grey;
+	/* Default color */
+	font-style: italic;
+	/* Default style */
+}
+
+/* Style for the placeholder text when there's an error */
+.save-creation-input.error::placeholder {
+	color: red;
+	/* Error color */
+	font-weight: bold;
+	/* Error style */
+}

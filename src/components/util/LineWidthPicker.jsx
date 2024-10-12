@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './linePicker.css';
 
 export default function LineWidthPicker({ selectedWidth, handleWidthChange, selectedColor, isShown, togglePicker }) {
     const widths = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];

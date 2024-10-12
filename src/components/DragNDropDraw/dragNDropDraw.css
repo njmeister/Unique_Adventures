@@ -1,0 +1,45 @@
+.drag-n-drop-draw-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background-color: whitesmoke;
+}
+
+.drag-n-drop-draw-droppable-container {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 70%;
+	width: 50%;
+	overflow: hidden;
+}
+
+.drag-n-drop-draw-background-element {
+	position: absolute;
+	max-height: fit-content;
+	z-index: 0;
+	max-height: 100%;
+	padding: 25px;
+
+}
+
+.sticker-container {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	height: 25%;
+	width: 100%;
+	z-index: 10;
+	overflow-x: scroll;
+	overflow-y: none;
+
+
+}

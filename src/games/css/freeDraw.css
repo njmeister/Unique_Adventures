@@ -1,3 +1,10 @@
 .save-creation-container {
 	margin-top: 8rem;
 }
+
+.free-draw-canvas {
+	position: absolute;
+	top: 80px;
+	left: 0;
+	z-index: 00;
+}

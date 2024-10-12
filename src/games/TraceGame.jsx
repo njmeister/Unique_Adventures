@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Stage, Layer, Line, Text } from 'react-konva';
+import './css/traceGame.css';
 
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
