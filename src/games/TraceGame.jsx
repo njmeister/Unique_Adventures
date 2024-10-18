@@ -51,7 +51,7 @@ const LetterTracingGame = () => {
 	return (
 		<>
 			<div className="trace-letter">			
-				<p>Trace the letter:</p>
+				{/* <p>Trace the letter:</p> */}
 				<h2>{alphabet[currentLetterIndex]}</h2>
 			</div>
 

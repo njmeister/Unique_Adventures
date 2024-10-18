@@ -6,6 +6,7 @@ import Pawn from './Pawn.jsx';
 import WordPop from '../util/WordPop.jsx';
 
 import './trickOrTreatGame.css';
+import MobileWarning from '../util/MobileWarning.jsx';
 
 const candyList = [
 	{ img: '/assets/img/trickOrTreat/sucker.svg', name: 'Sucker', shape: 'round' },
@@ -121,6 +122,7 @@ export default function TrickOrTreatGame() {
 
 	return (
 		<div className="trick-or-treat-game">
+			<MobileWarning />
 			<House onDoorClick={handleDoorClick} isDoorClicked={isDoorClicked} isInteracted={isDoorInteracted} onAnimationRest={resetInteractions} />
 			<animated.div className="candy-container" style={candySpringProps}>
 				{shuffledCandyList.map((candy, index) => (

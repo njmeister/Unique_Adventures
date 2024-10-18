@@ -16,7 +16,7 @@
 	justify-content: center;
 	align-items: center;
 	height: 70%;
-	width: 50%;
+	width: 70%;
 	overflow: hidden;
 }
 
@@ -42,4 +42,23 @@
 	overflow-y: none;
 
 
+}
+
+@media (max-width: 768px) {
+	.creation-name-container{
+		display: none;
+	}
+}
+
+@media (max-width: 1150px) {
+	.drag-n-drop-draw-droppable-container {
+		width: 100%;
+
+		& img {
+			max-width: 100%;
+		}
+	}
+	.sticker-container {
+		width: 100%;
+	}
 }

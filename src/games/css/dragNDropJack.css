@@ -1,0 +1,46 @@
+#jack-mouth2 {
+  & img {
+	/* width: 100%; */
+	max-width: 500px;
+	max-height: 200px;
+  }
+}
+
+.sticker-image {
+	max-width: 450px;
+}
+
+@media (max-width: 1150px) {
+	.sticker-image {
+		max-width: 450px !important;
+		max-height: 200px !important;
+	}
+}
+
+@media (max-width: 768px) {
+	.sticker-image {
+		max-width: 400px !important;
+		max-height: 150px !important;
+	}
+}
+
+@media (max-width: 600px) {
+	.sticker-image {
+		max-width: 350px !important;
+		max-height: 1200px !important;
+	}
+}
+
+@media (max-width: 500px) {
+	.sticker-image {
+		max-width: 300px !important;
+		max-height: 100px !important;
+	}
+}
+
+@media (max-width: 400px) {
+	.sticker-image {
+		max-width: 250px !important;
+		max-height: 80px !important;
+	}
+}

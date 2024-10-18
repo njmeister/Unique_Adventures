@@ -7,7 +7,7 @@ export default function MatchingModelA({ identity, style, img, text, className }
 
   return (
     <div className={className} ref={setNodeRef} style={style}>
-     {img ? <img src={img} alt={identity} id={`${identity}`} /> : text ? <p>{text}</p> : <h1>{identity}</h1>}
+     {img ? <img src={img} alt={identity} id={`${identity}-img`} /> : text ? <p>{text}</p> : <h1>{identity}</h1>}
     </div>
   );
 }

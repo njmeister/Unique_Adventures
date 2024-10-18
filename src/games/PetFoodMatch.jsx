@@ -1,97 +1,100 @@
 import React, { useState, useEffect } from 'react';
 import MatchGame from '../components/matchingGames/MatchGame';
 import OptionsList from '../components/util/OptionsList';
-import './css/petFoodMatch.css';
+import MobileWarning from '../components/util/MobileWarning';
+import matchGameStyles from '../components/matchingGames/matchGame.module.css';
+import petFoodMatchStyles from './css/petFoodMatch.module.css';
+import classNames from 'classnames';
 
 const modelAAnimalList = [
-	{
-		identity: 'Dog',
-		img: '/assets/img/petFoodMatch/dog.svg',
-		text: 'Dog',
-		successSound: '/assets/audio/petFoodMatch/dogHappy.mp3',
-		failureSound: '/assets/audio/petFoodMatch/dogSad.mp3',
-	},
-	{
-		identity: 'Cat',
-		img: '/assets/img/petFoodMatch/cat.svg',
-		text: 'Cat',
-		successSound: '/assets/audio/petFoodMatch/catHappy.mp3',
-		failureSound: '/assets/audio/petFoodMatch/catSad.mp3',
-	},
-	{
-		identity: 'Bird',
-		img: '/assets/img/petFoodMatch/bird.svg',
-		text: 'Bird',
-		successSound: '/assets/audio/petFoodMatch/birdHappy.mp3',
-		failureSound: '/assets/audio/petFoodMatch/birdSad.mp3',
-	},
-	{
-		identity: 'Fish',
-		img: '/assets/img/petFoodMatch/fish.svg',
-		text: 'Fish',
-		successSound: '/assets/audio/petFoodMatch/fishHappy.mp3',
-		failureSound: '/assets/audio/petFoodMatch/fishSad.mp3',
-	},
-	{
-		identity: 'Rabbit',
-		img: '/assets/img/petFoodMatch/rabbit.svg',
-		text: 'Rabbit',
-		successSound: '/assets/audio/petFoodMatch/rabbitHappy.mp3',
-		failureSound: '/assets/audio/petFoodMatch/rabbitSad.wav',
-	},
+    {
+        identity: 'Dog',
+        img: '/assets/img/petFoodMatch/dog.svg',
+        text: 'Dog',
+        successSound: '/assets/audio/petFoodMatch/dogHappy.mp3',
+        failureSound: '/assets/audio/petFoodMatch/dogSad.mp3',
+    },
+    {
+        identity: 'Cat',
+        img: '/assets/img/petFoodMatch/cat.svg',
+        text: 'Cat',
+        successSound: '/assets/audio/petFoodMatch/catHappy.mp3',
+        failureSound: '/assets/audio/petFoodMatch/catSad.mp3',
+    },
+    {
+        identity: 'Bird',
+        img: '/assets/img/petFoodMatch/bird.svg',
+        text: 'Bird',
+        successSound: '/assets/audio/petFoodMatch/birdHappy.mp3',
+        failureSound: '/assets/audio/petFoodMatch/birdSad.mp3',
+    },
+    {
+        identity: 'Fish',
+        img: '/assets/img/petFoodMatch/fish.svg',
+        text: 'Fish',
+        successSound: '/assets/audio/petFoodMatch/fishHappy.mp3',
+        failureSound: '/assets/audio/petFoodMatch/fishSad.mp3',
+    },
+    {
+        identity: 'Rabbit',
+        img: '/assets/img/petFoodMatch/rabbit.svg',
+        text: 'Rabbit',
+        successSound: '/assets/audio/petFoodMatch/rabbitHappy.mp3',
+        failureSound: '/assets/audio/petFoodMatch/rabbitSad.wav',
+    },
 ];
 const modelBAnimalList = [
-	{ identity: 'Dog', img: '/assets/img/petFoodMatch/dogFood.svg' },
-	{ identity: 'Cat', img: '/assets/img/petFoodMatch/catFood.svg' },
-	{ identity: 'Bird', img: '/assets/img/petFoodMatch/birdFood.svg' },
-	{ identity: 'Fish', img: '/assets/img/petFoodMatch/fishFood.svg' },
-	{ identity: 'Rabbit', img: '/assets/img/petFoodMatch/rabbitFood.svg' },
+    { identity: 'Dog', img: '/assets/img/petFoodMatch/dogFood.svg' },
+    { identity: 'Cat', img: '/assets/img/petFoodMatch/catFood.svg' },
+    { identity: 'Bird', img: '/assets/img/petFoodMatch/birdFood.svg' },
+    { identity: 'Fish', img: '/assets/img/petFoodMatch/fishFood.svg' },
+    { identity: 'Rabbit', img: '/assets/img/petFoodMatch/rabbitFood.svg' },
 ];
 
 const modelAColorList = [
-	{
-		identity: 'Red',
-		img: '/assets/img/petFoodMatch/dog.svg',
-		text: 'Dog',
-		successSound: '/assets/audio/petFoodMatch/dogHappy.mp3',
-		failureSound: '/assets/audio/petFoodMatch/dogSad.mp3',
-	},
-	{
-		identity: 'Blue',
-		img: '/assets/img/petFoodMatch/dog2.svg',
-		text: 'Dog',
-		successSound: '/assets/audio/petFoodMatch/dogHappy.mp3',
-		failureSound: '/assets/audio/petFoodMatch/dogSad.mp3',
-	},
-	{
-		identity: 'Yellow',
-		img: '/assets/img/petFoodMatch/dog3.svg',
-		text: 'Dog',
-		successSound: '/assets/audio/petFoodMatch/dogHappy.mp3',
-		failureSound: '/assets/audio/petFoodMatch/dogSad.mp3',
-	},
-	{
-		identity: 'Purple',
-		img: '/assets/img/petFoodMatch/dog4.svg',
-		text: 'Dog',
-		successSound: '/assets/audio/petFoodMatch/dogHappy.mp3',
-		failureSound: '/assets/audio/petFoodMatch/dogSad.mp3',
-	},
-	{
-		identity: 'Green',
-		img: '/assets/img/petFoodMatch/dog5.svg',
-		text: 'Dog',
-		successSound: '/assets/audio/petFoodMatch/dogHappy.mp3',
-		failureSound: '/assets/audio/petFoodMatch/dogSad.mp3',
-	},
+    {
+        identity: 'Red',
+        img: '/assets/img/petFoodMatch/dog.svg',
+        text: 'Dog',
+        successSound: '/assets/audio/petFoodMatch/dogHappy.mp3',
+        failureSound: '/assets/audio/petFoodMatch/dogSad.mp3',
+    },
+    {
+        identity: 'Blue',
+        img: '/assets/img/petFoodMatch/dog2.svg',
+        text: 'Dog',
+        successSound: '/assets/audio/petFoodMatch/dogHappy.mp3',
+        failureSound: '/assets/audio/petFoodMatch/dogSad.mp3',
+    },
+    {
+        identity: 'Yellow',
+        img: '/assets/img/petFoodMatch/dog3.svg',
+        text: 'Dog',
+        successSound: '/assets/audio/petFoodMatch/dogHappy.mp3',
+        failureSound: '/assets/audio/petFoodMatch/dogSad.mp3',
+    },
+    {
+        identity: 'Purple',
+        img: '/assets/img/petFoodMatch/dog4.svg',
+        text: 'Dog',
+        successSound: '/assets/audio/petFoodMatch/dogHappy.mp3',
+        failureSound: '/assets/audio/petFoodMatch/dogSad.mp3',
+    },
+    {
+        identity: 'Green',
+        img: '/assets/img/petFoodMatch/dog5.svg',
+        text: 'Dog',
+        successSound: '/assets/audio/petFoodMatch/dogHappy.mp3',
+        failureSound: '/assets/audio/petFoodMatch/dogSad.mp3',
+    },
 ];
 
 const modelBColorList = [
-	{ identity: 'Red', img: '/assets/img/petFoodMatch/dogFood.svg' },
-	{ identity: 'Blue', img: '/assets/img/petFoodMatch/dog2Food.svg' },
-	{ identity: 'Yellow', img: '/assets/img/petFoodMatch/dog3Food.svg' },
-	{ identity: 'Purple', img: '/assets/img/petFoodMatch/dog4Food.svg' },
-	{ identity: 'Green', img: '/assets/img/petFoodMatch/dog5Food.svg' },
+    { identity: 'Red', img: '/assets/img/petFoodMatch/dogFood.svg' },
+    { identity: 'Blue', img: '/assets/img/petFoodMatch/dog2Food.svg' },
+    { identity: 'Yellow', img: '/assets/img/petFoodMatch/dog3Food.svg' },
+    { identity: 'Purple', img: '/assets/img/petFoodMatch/dog4Food.svg' },
+    { identity: 'Green', img: '/assets/img/petFoodMatch/dog5Food.svg' },
 ];
 
 const animalInstructions = "Can you find everyone's favorite food?";
@@ -101,7 +104,7 @@ const successMessage = 'Everyone is fed!';
 const background = '/assets/img/petFoodMatch/background.svg';
 
 const animalOptions = [
-	{ name: 'Background', type: 'checkbox' },
+    { name: 'Background', type: 'checkbox' },
   { name: 'Dog', type: 'checkbox' },
   { name: 'Cat', type: 'checkbox' },
   { name: 'Bird', type: 'checkbox' },
@@ -110,7 +113,7 @@ const animalOptions = [
 ];
 
 const colorOptions = [
-	{ name: 'Background', type: 'checkbox' },
+    { name: 'Background', type: 'checkbox' },
   { name: 'Red', type: 'checkbox' },
   { name: 'Blue', type: 'checkbox' },
   { name: 'Yellow', type: 'checkbox' },
@@ -119,7 +122,7 @@ const colorOptions = [
 ];
 
 const defaultOptions = [
-	{ name: 'Background', type: 'checkbox'}
+    { name: 'Background', type: 'checkbox'}
 ];
 
 export default function PetFoodMatch() {
@@ -153,6 +156,7 @@ export default function PetFoodMatch() {
             background={background}
             instructions={animalInstructions}
             checkedItems={checkedItems}
+            customStyles={petFoodMatchStyles}
           />
         );
       case 'colors':
@@ -164,17 +168,19 @@ export default function PetFoodMatch() {
             background={background}
             instructions={colorInstructions}
             checkedItems={checkedItems}
+            customStyles={petFoodMatchStyles}
           />
         );
       default:
         return (
-          <div className="lesson-select-container">
-            <div className="match-game-background">
-			{checkedItems.includes('Background') && <img src={background} />}
+          <div className={matchGameStyles.lessonSelectContainer}>
+            <MobileWarning />
+            <div className={petFoodMatchStyles.matchGameBackground}>
+            {checkedItems.includes('Background') && <img src={background} />}
             </div>
-            <div className="lesson-select">
+            <div className={matchGameStyles.lessonSelect}>
               <h3>What would you like to learn today?</h3>
-              <div className="lesson-select-buttons">
+              <div className={matchGameStyles.lessonSelectButtons}>
                 <button onClick={() => setLesson('animals')}>Animals</button>
                 <button onClick={() => setLesson('colors')}>Colors</button>
               </div>

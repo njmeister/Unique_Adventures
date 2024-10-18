@@ -8,13 +8,19 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-	rollupOptions: {
-		input: '/index.html',
-	},
+    rollupOptions: {
+      input: '/index.html',
+    },
   },
   resolve: {
     alias: {
       '@': '/src',
+    },
+  },
+  css: {
+    modules: {
+      localsConvention: 'camelCase', // Converts class names to camelCase to match your imports
+      scopeBehaviour: 'local', // Ensure the CSS is scoped locally by default
     },
   },
 });

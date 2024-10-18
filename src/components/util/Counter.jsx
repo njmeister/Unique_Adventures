@@ -1,21 +1,34 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react';
 import './counter.css';
 
-export default function Counter({ initialCount = 0, incrementDisplay, decrementDisplay, upperLimit, lowerLimit, onCountChange }) {
-	const [count, setCount] = useState(initialCount);
+export default function Counter({
+	initialCount = 0,
+	incrementDisplay,
+	decrementDisplay,
+	upperLimit,
+	lowerLimit,
+	onCountChange,
+	count,
+}) {
+	const [internalCount, setInternalCount] = useState(initialCount);
+
+	useEffect(() => {
+		setInternalCount(count);
+	}, [count]);
 
 	const increment = () => {
-		if (count < upperLimit || upperLimit === undefined){ 
-			setCount(count + 1);
-			onCountChange(count + 1);
+		if (internalCount < upperLimit || upperLimit === undefined) {
+			const newCount = internalCount + 1;
+			setInternalCount(newCount);
+			onCountChange(newCount);
 		}
 	};
 
 	const decrement = () => {
-		if (count > lowerLimit || lowerLimit === undefined) { 
-			setCount(count - 1);
-			onCountChange(count - 1);
+		if (internalCount > lowerLimit || lowerLimit === undefined) {
+			const newCount = internalCount - 1;
+			setInternalCount(newCount);
+			onCountChange(newCount);
 		}
 	};
 
@@ -25,7 +38,7 @@ export default function Counter({ initialCount = 0, incrementDisplay, decrementD
 				{incrementDisplay ? incrementDisplay : <span>&and;</span>}
 			</div>
 			<div className="counter-display">
-				<h1>{count}</h1>
+				<h1>{internalCount}</h1>
 			</div>
 			<div className="counter-decrement" onClick={decrement}>
 				{decrementDisplay ? decrementDisplay : <span>&or;</span>}

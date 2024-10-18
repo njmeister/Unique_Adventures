@@ -60,6 +60,7 @@ export default function DragNDropDraw({
                         key={sticker.id}
                         onClick={() => handleStickerClick(sticker)}
                         className="sticker-button"
+						id={sticker.id}
                     >
                         <img
                             src={sticker.src}
@@ -71,7 +72,9 @@ export default function DragNDropDraw({
                     </div>
                 ))}
             </div>
-			<SaveCreationButton saveDiv=".drag-n-drop-draw-droppable-container" gameTitle={gameTitle} />
+			<div className="creation-name-container">
+				<SaveCreationButton saveDiv=".drag-n-drop-draw-droppable-container" gameTitle={gameTitle} />
+			</div>
         </div>
     );
 }

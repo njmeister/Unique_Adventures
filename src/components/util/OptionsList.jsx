@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import './optionsList.css';
 
 export default function OptionsList({
     options = [],
@@ -33,59 +34,17 @@ export default function OptionsList({
         };
     }, []);
 
-    const buttonStyle = {
-        cursor: 'pointer',
-        width: '75px',
-        height: '60px',
-        zIndex: 100,
-        position: 'fixed',
-        bottom: '75px',
-        left: '20px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-evenly',
-        alignItems: 'center',
-    };
-    const hamburgerStyle = {
-        width: '50px',
-        height: '5px',
-        backgroundColor: 'white',
-        borderRadius: '10px',
-        border: '2px solid black',
-        position: 'relative',
-    };
-    const menuStyle = {
-        position: 'fixed',
-        bottom: '150px',
-        left: '0',
-        width: '25%',
-        height: '80%',
-        backgroundColor: 'rgba(0, 0, 0, 0.75)',
-        zIndex: 100,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-    };
-    const optionsStyle = {
-        position: 'relative',
-        zIndex: 110,
-        width: '50%',
-        margin: '10px',
-        padding: '10px',
-    };
-
     return (
         <div ref={optionsRef}>
-            <div onClick={() => setShowOptions(!showOptions)} style={buttonStyle}>
-                <div style={hamburgerStyle}></div>
-                <div style={hamburgerStyle}></div>
-                <div style={hamburgerStyle}></div>
+            <div onClick={() => setShowOptions(!showOptions)} className="button-style">
+                <div className="hamburger-style"></div>
+                <div className="hamburger-style"></div>
+                <div className="hamburger-style"></div>
             </div>
             {showOptions && (
-                <div style={menuStyle}>
+                <div className="menu-style">
                     {options.map((option, index) => (
-                        <div style={optionsStyle} key={index}>
+                        <div className="option-style" key={index}>
                             {option.type === 'checkbox' ? (
                                 <>
                                     <input

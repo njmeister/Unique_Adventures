@@ -3,44 +3,12 @@
 	bottom: 0;
 	left: 0;
 	width: auto;
+	height: 200px;
 	margin: 0px 100px;
 }
 
-.pinwheel {
-	position: relative;
-	z-index: 3;
-	width: 30%;
-	aspect-ratio: 2/3;
-	overflow: hidden;
-	margin: 1rem;
-	flex: 0 1 auto;
-	max-height: 450px;
-	max-width: 300px;
-}
-
-.wheel {
-	position: absolute;
-	width: 100%;
-	z-index: 4;
-}
-
-.pin {
-	position: absolute;
-	width: 15%;
-	left: 43.5%;
-	top: 30%;
-	z-index: 5;
-}
-
-.pole {
-	position: absolute;
-	width: 50%;
-	height: 50%;
-	bottom: 0;
-	left: 0;
-}
-
 .pinwheel-page {
+	position: relative;
 	height: 100vh;
 }
 
@@ -65,8 +33,6 @@
 	height: 100vh;
 }
 
-@media (max-width: 1000px) {
-	.pinwheel {
-		max-width: 25%;
-	}
+.instructions {
+	position: absolute;
 }

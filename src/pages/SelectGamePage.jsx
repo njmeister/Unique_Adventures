@@ -26,7 +26,7 @@ export default function SelectGamePage() {
                 </Link>
                 <Link to="/play/tracegame" className="select-screen">
                     <img src="/assets/img/traceGame/trace-select-screen.png" alt="Trace Game" id="trace-select-screen" />
-                    <p id="trace-title">Trace Game</p>
+                    <p id="trace-title">Trace The Alphabet</p>
                 </Link>
                 <Link to="/play/dragndropjack" className="select-screen">
                     <img
@@ -42,11 +42,11 @@ export default function SelectGamePage() {
                 </Link>
                 <Link to="/play/bubblefallleaves" className="select-screen">
                     <img src="/assets/img/leafFall/leaf-pile_2.png" alt="Leaf Fall" id="leaf-fall-select-screen" />
-                    <p id="leaf-fall-title">Leaf Fall</p>
+                    <p id="leaf-fall-title">Falling Leaves</p>
                 </Link>
                 <Link to="/play/applecount" className="select-screen">
 					<img src="/assets/img/appleCount/apple-count-select-screen.svg" alt="Apple Count" id="apple-count-select-screen" />
-					<p id="apple-count-title">Apple Count</p>
+					<p id="apple-count-title">Apple Picking</p>
 				</Link>
 				<Link to="/play/halloweencardmatch" className="select-screen">
 					<img src="/assets/img/halloweenCardMatch/halloween-card-match-select-screen.png" alt="Halloween Card Match" id="halloween-card-match-select-screen" />
@@ -58,7 +58,7 @@ export default function SelectGamePage() {
 				</Link>
 				<Link to="/play/trickortreat" className="select-screen">
 					<img src="/assets/img/trickOrTreat/trick-or-treat-select-screen.png" alt="Trick or Treat" id="trick-or-treat-select-screen" />
-					<p id="trick-or-treat-title">Trick or Treat</p>
+					<p id="trick-or-treat-title">Trick-or-Treating</p>
 				</Link>
             </div>
             <Outlet /> {/* This will render the nested routes */}

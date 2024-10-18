@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 import PinwheelWheel from './PinwheelWheel';
+import CSS from './pinwheel.module.css';
 
 export default function Pinwheel({ color }) {
 	const [spinning, setSpinning] = useState(false);
@@ -29,12 +30,12 @@ export default function Pinwheel({ color }) {
 	};
 
 	return (
-		<div className="pinwheel" onClick={toggleSpin}>
-			<div className="pin">
-				<img src="/assets/img/Pinwheel/pin.svg" alt="pin" />
+		<div className={CSS.pinwheel} onClick={toggleSpin}>
+			<div className={CSS.pin}>
+				<img src="/assets/img/Pinwheel/pin.svg" alt="pin" draggable="false" />
 			</div>
 			<animated.div
-				className="wheel"
+				className={CSS.wheel}
 				style={{ transform: rotate.to((r) => `rotate(${r}deg)`) }}
 			>
 				<PinwheelWheel
@@ -44,8 +45,8 @@ export default function Pinwheel({ color }) {
 					highlight={color.highlight}
 				/>
 			</animated.div>
-			<div className="pole">
-				<img src="/assets/img/Pinwheel/pole.svg" alt="pole" />{' '}
+			<div className={CSS.pole}>
+				<img src="/assets/img/Pinwheel/pole.svg" alt="pole"  draggable="false"/>{' '}
 			</div>
 		</div>
 	);

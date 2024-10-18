@@ -1,5 +1,6 @@
 import React from 'react';
-import DragNDropDraw from '../components/DragNDropDraw/DragNDropDraw'; // Correct import
+import DragNDropDraw from '../components/DragNDropDraw/DragNDropDraw';
+import './css/dragNDropJack.css';
 
 export default function DragNDropJack() {
     const droppableBackground = '/assets/img/jack-o-lantern/pumpkin1.png';

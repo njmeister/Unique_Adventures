@@ -1,0 +1,142 @@
+.match-game-container {
+
+}
+
+.match-game-instructions {
+    position: absolute;
+    top: 20vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.model-a-list {
+	display: flex;
+	flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.model-b-list {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    margin-top: 125px;
+}
+
+.model-a-container {
+    margin: 1rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.model-a-container img {
+    width: 100%;
+    max-width: 150px;
+    max-height: 200px;
+}
+
+.model-b-container {
+    margin: 1rem;
+    padding: 1rem;
+    touch-action: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100px;
+}
+
+.model-b-container img {
+    width: 100%;
+    max-width: 125px;
+    max-height: 100px;
+}
+
+.droppable-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+	height: 300px;
+	/* width: fit-content; */
+}
+
+.model-a, .matched-model-a {
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    margin: 15px 7px 0px 7px;
+}
+
+.success-message {
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    height: 50vh;
+}
+
+.play-again {
+    position: absolute;
+    border-radius: 25px;
+    padding: 10px;
+    width: 200px;
+    height: 55px;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: large;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.match-game-background {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+
+.lesson-select {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background-color: lightslategray;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.lesson-select-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 10px;
+}
+
+.lesson-select-buttons button {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}

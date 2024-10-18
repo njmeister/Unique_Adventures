@@ -35,3 +35,15 @@
 		font-size: 700px;
 	}
 }
+
+@media (max-width: 768px) {
+	.trace-letter {
+		& p {
+			font-size: 50px;
+		}
+
+		& h2 {
+			font-size: 350px;
+		}
+	}
+}
